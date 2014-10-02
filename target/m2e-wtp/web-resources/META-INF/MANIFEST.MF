@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Built-By: jinkai.xu
-Build-Jdk: 1.6.0_45
+Built-By: jk
+Build-Jdk: 1.6.0_20
 Created-By: Maven Integration for Eclipse
 
