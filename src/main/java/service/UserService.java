@@ -30,6 +30,11 @@ public class UserService{
         System.out.println("maybe");
     }
 
+    public void life(){
+    
+    
+        System.out.println("life");
+    }
 
 
 }
