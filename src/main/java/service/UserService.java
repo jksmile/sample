@@ -36,5 +36,8 @@ public class UserService{
         System.out.println("life");
     }
 
+    public void why(){
+        System.out.println("why");
+    }
 
 }
