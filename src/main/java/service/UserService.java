@@ -9,8 +9,13 @@ public class UserService{
 
     public void test(){
     
-        Sysout.out.println("OK");
+        System.out.print("OK");
+    }
+
+
+    public void love{
     
+        System.out.println("love");
     }
 
 
