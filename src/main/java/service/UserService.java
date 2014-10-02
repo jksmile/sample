@@ -13,12 +13,16 @@ public class UserService{
     }
 
 
-    public void love{
+    public void love(){
     
         System.out.println("love");
     }
 
 
+    public void mine(){
+    
+        System.out.println("OK");
+    }
 
 
 
