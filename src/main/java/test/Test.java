@@ -18,4 +18,8 @@ public class Test{
         System.out.println("love");
     
     }
+
+    public void testlove(){
+        System.out.println("testlove");
+    }
 }
