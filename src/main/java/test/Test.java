@@ -16,10 +16,8 @@ public class Test{
     public void love(){
     
         System.out.println("love");
+        System.out.println("1");
     
     }
 
-    public void testlove(){
-        System.out.println("testlove");
-    }
 }
