@@ -1,43 +1,31 @@
 package service;
 
+import dao.UserDao;
+import dao.LoginLogDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+
+
+
+
+@Service
 public class UserService{
 
+    @Autowired
+    private UserDao userDao;
 
+    @Autowired
+    private LoginLogDao loginLogDao;
 
+    public boolean hasMatchUser(String userName,String password){
+        int matchCount = userDao.getMatchCount(userName,password);
 
-
-    public void test(){
+        return matchCount > 0;
     
-        System.out.print("OK");
     }
 
-
-    public void love(){
     
-        System.out.println("love");
-    }
 
-
-    public void mine(){
-    
-        System.out.println("OK");
-    }
-
-
-    public void maybe(){
-    
-        System.out.println("maybe");
-    }
-
-    public void life(){
-    
-    
-        System.out.println("life");
-    }
-
-    public void why(){
-        System.out.println("why");
-    }
 
 }
