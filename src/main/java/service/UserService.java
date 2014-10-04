@@ -1,31 +1,46 @@
 package service;
 
-import dao.UserDao;
-import dao.LoginLogDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
-
+import dao.LoginLogDao;
+import dao.UserDao;
+import domain.User;
+import domain.LoginLog;
 
 
 @Service
 public class UserService{
 
     @Autowired
-    private UserDao userDao;
+    private UserDao userDao; 
 
     @Autowired
-    private LoginLogDao loginLogDao;
+    private LoginLogDao loginLogDao
 
-    public boolean hasMatchUser(String userName,String password){
+    private String a;
+
+    public boolean hasMatchUser(String userName, String password){
+    
         int matchCount = userDao.getMatchCount(userName,password);
+        
+        return matchCount >0; 
+    }
 
-        return matchCount > 0;
+    public User findUserByUserName(String userName){
+        
+        return userDao.findUserByUserName(userName);
     
     }
 
+    public void loginSuccess(User user){
     
-
-
+        user.setCredits(5+user.getCredits());
+        LoginLog loginLog = new LoginLog();
+        loginLog.setUserId(user.getUserId());
+        loginLog.setIp(user.getLastIp());
+        loginLog.setLoginDate(user.getLastVisit());
+        userDao.updateLoginInfo(user);
+        loginLogDao.insertLoginLog(loginLog);
+    }
 }
