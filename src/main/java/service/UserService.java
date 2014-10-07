@@ -17,9 +17,7 @@ public class UserService{
     private UserDao userDao; 
 
     @Autowired
-    private LoginLogDao loginLogDao
-    
-    ;
+    private LoginLogDao loginLogDao;
 
     public boolean hasMatchUser(String userName, String password){
     
